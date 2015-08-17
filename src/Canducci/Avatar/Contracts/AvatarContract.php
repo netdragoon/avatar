@@ -1,5 +1,8 @@
-<?php namespace Canducci\Avatar\Contracts;
+<?php
+
+namespace Canducci\Avatar\Contracts;
 
 interface AvatarContract {
-    public function getAvatarInfo($email, $width = 80);
+
+    public function getAvatarInfo($email, $width = 80, $path = 'image/');
 }
