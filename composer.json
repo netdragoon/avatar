@@ -2,7 +2,7 @@
     "name": "canducci/avatar",
     "type": "library",
     "description": "Canducci Avatar",
-    "keywords": ["Avatar", "canducci", "Laravel 5.0.*", "Laravel 5.1.*"],
+    "keywords": ["Avatar", "canducci"],
     "homepage": "https://github.com/diasfulvio/avatar",
     "license": "MIT",
     "authors": [
