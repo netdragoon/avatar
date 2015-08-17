@@ -14,7 +14,7 @@ class AvatarInfo {
 
         $this->path = $path;
         $this->hash = $hash;
-        $this->url = sprintf('%s%s.jpg?s=%s', AvatarInfo::Url, $hash, $width);
+        $this->url  = sprintf('%s%s.jpg?s=%s', AvatarInfo::Url, $hash, $width);
         $this->saveImage();
         
     }
@@ -47,7 +47,7 @@ class AvatarInfo {
     protected function saveImage() {
 
         $filename = sprintf('%s%s.jpg', $this->path, $this->hash);
-
+        //var_dump(get_headers($this->url));
         if (!file_exists($filename)) {
             $ch = curl_init($this->url);
             $fp = fopen($filename, 'wb');
