@@ -2,7 +2,11 @@
 
 namespace Canducci\Avatar\Contracts;
 
-interface AvatarContract {
+abstract class AvatarContract {
 
-    public function getAvatarInfo($email, $width = 80, $path = 'image/');
+    protected $avatarEmail;
+    protected $avatarProperty;
+    protected $avatarSave;
+
+    abstract function getAvatarInfo($email, $width = 80, $path = 'image/', $secure = false);
 }

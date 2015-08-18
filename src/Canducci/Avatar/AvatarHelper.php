@@ -7,7 +7,7 @@ if (!function_exists('avatar'))
         
         $avatar_help = app('Canducci\Avatar\Contracts\AvatarContract');        
         
-        return $avatar_help->getAvatarInfo($email, $width, $path);
+        return $avatar_help->getAvatarInfo($email, $width, $path, false);
         
     }
 }
