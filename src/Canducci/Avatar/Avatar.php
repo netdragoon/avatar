@@ -3,25 +3,27 @@
 namespace Canducci\Avatar;
 
 use Canducci\Avatar\Contracts\AvatarContract;
-use Exception;
+use Canducci\Avatar\AvatarProperty;
 
 class Avatar implements AvatarContract {
-
-    public function getAvatarInfo($email, $width = 80, $path = 'image/') {
+    
+    private $avatarEmail;
+    private $avatarProperty;
+    private $avatarSave;
+    private $url;
+    
+    
+    public function getAvatarInfo($email, $width = 80, $path = 'image/') {        
         
-        if ($this->isEmail($email) == false)
-        {
-            throw new Exception("\nAvatar\nErro: Email invalid !!!\n\n");
-        }
+        $this->avatarEmail    = new AvatarEmail($email);                        
+        $this->avatarProperty = new AvatarProperty($this->avatarEmail->getHash(), $width, $path);
+        $this->avatarSave     = new AvatarSave($this->avatarEmail, $this->avatarProperty);
+        $this->avatarSave->save();
         
-        return new AvatarInfo(md5(strtolower(trim($email))), $width, $path);
+        return new AvatarInfo($this->avatarEmail, $this->avatarProperty);
+        
     }
-
-    private function isEmail($email) {
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            return true;
-        }
-        return false;
-    }
+    
+    
 
 }

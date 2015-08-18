@@ -4,59 +4,53 @@ namespace Canducci\Avatar;
 
 class AvatarInfo {
 
-    private $url;
-    private $hash;
-    private $path;
+    
+    private $avatarEmail;
+    private $avatarProperty;
 
     const Url = 'http://www.gravatar.com/avatar/';
 
-    public function __construct($hash, $width = 80, $path = 'image/') {
+    public function __construct(AvatarEmail $avatarEmail, AvatarProperty $avatarProperty) {
 
-        $this->path = $path;
-        $this->hash = $hash;
-        $this->url  = sprintf('%s%s.jpg?s=%s', AvatarInfo::Url, $hash, $width);
-        $this->saveImage();
+        $this->avatarEmail    = $avatarEmail;
+        $this->avatarProperty = $avatarProperty;                
         
     }
 
     public function getPath() {
 
-        return $this->path;
-    }
-    
-    public function getUrl() {
-
-        return $this->url;
+        return $this->avatarProperty->getPath();
     }
 
     public function getHash() {
 
-        return $this->hash;
+        return $this->avatarEmail->getHash();
     }
-
+    
+    public function getWith()
+    {
+        
+        return $this->avatarProperty->getWidth();
+        
+    }
+    
+    public function getEmail()
+    {
+        return $this->avatarEmail->getEmail();
+        
+    }
+    
     public function getTagImage() {
 
-        return sprintf('<img src="/%s%s.jpg" />', $this->path, $this->hash);
+        return sprintf('<img src="/%s%s.jpg" />', $this->getPath(), $this->getHash());
     }
 
     public function getImage() {
 
-        return sprintf('%s.jpg', $this->hash);
+        return sprintf('%s.jpg', $this->getHash());
+        
     }
 
-    protected function saveImage() {
-
-        $filename = sprintf('%s%s.jpg', $this->path, $this->hash);
-        //var_dump(get_headers($this->url));
-        if (!file_exists($filename)) {
-            $ch = curl_init($this->url);
-            $fp = fopen($filename, 'wb');
-            curl_setopt($ch, CURLOPT_FILE, $fp);
-            curl_setopt($ch, CURLOPT_HEADER, 0);
-            curl_exec($ch);
-            curl_close($ch);
-            fclose($fp);
-        }
-    }
+    
 
 }
