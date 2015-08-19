@@ -37,8 +37,9 @@ Para facilitar foi criado uma `function` (função) para manipular de forma simp
   Explicação:
   
     $email   = 'email referente ao seu cadastro no site pt.gravatar.com';
-    $tamanho = 'tamanho da imagem em pixel (px)');
+    $tamanho = 'tamanho da imagem em pixel (px)';
     $pasta   = 'pasta responsável por guardar uma cópia da imagem para otimização de tráfego de sua rede'
+               Observação: se for especificamente para o Laravel ficará dentro da pasta public a pasta que tu passar como                  parametro
   
   Exemplo:
   
