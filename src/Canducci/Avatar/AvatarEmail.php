@@ -2,23 +2,21 @@
 
 use Canducci\Avatar\Contracts\AvatarEmailContract;
 
-class AvatarEmail extends AvatarEmailContract {
+final class AvatarEmail extends AvatarEmailContract {
 
-    public function __construct($email) {
-
+    public function __construct($email)
+    {
         $this->valid($email);
     }
 
-    public function getEmail() {
-
+    public function getEmail()
+    {
         return $this->email;
-
     }
 
-    public function getHash() {
-
+    public function getHash()
+    {
         return md5(strtolower(trim($this->email)));
-
     }
 
 }

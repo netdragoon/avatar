@@ -2,26 +2,37 @@
 
 use Canducci\Avatar\Contracts\AvatarPropertyContract;
 
-
-class AvatarProperty extends AvatarPropertyContract {
+final class AvatarProperty extends AvatarPropertyContract {
 
     const AvatarUrl = 'http://www.gravatar.com/avatar/';
-    const AvatarUrlSecure = 'https://secure.gravatar.com/avatar';
+    const AvatarUrlSecure = 'https://secure.gravatar.com/avatar/';
     
-    public function __construct(AvatarEmail $avatarEmail, $width = 80, $path = 'image/', $secure = false)
+    public function __construct(AvatarEmail $avatarEmail, $width = 80, $path = 'image/', $secure = false, $avatarRating = AvatarRating::G, $avatarImageExtension = AvatarImageExtension::Jpg)
     {
-        $format = '%s%s.jpg?s=%s&d=404';
         $this->validWidth($width);
+
         $this->validPath($path);
+
+        $this->avatarRating = $avatarRating;
+
+        $this->avatarImageExtension = $avatarImageExtension;
+
+        $format = '%s%s.%s?s=%s&d=404&r=%s';
+
         $this->secure = $secure;
+
         $this->avatarEmail = $avatarEmail;
-        $this->url[0] = sprintf($format, self::AvatarUrl, $avatarEmail->getHash(), $width);
-        $this->url[1] = sprintf($format, self::AvatarUrlSecure, $avatarEmail->getHash(), $width);
-        $this->fileName = sprintf('%s%s-%s.jpg', 
+
+        $this->url[0] = sprintf($format, self::AvatarUrl, $avatarEmail->getHash(), $this->getImageExtension(),$width, $this->getAvatarRating());
+
+        $this->url[1] = sprintf($format, self::AvatarUrlSecure, $avatarEmail->getHash(), $this->getImageExtension(),$width, $this->getAvatarRating());
+
+        $this->fileName = sprintf('%s%s-%s.%s',
                         $this->getPath(), 
                         $this->getAvatarEmail()->getHash(),
-                        $this->getWidth());
-        
+                        $this->getWidth(),
+                        $this->getImageExtension());
+
     }
 
     public function getWidth()
@@ -31,9 +42,7 @@ class AvatarProperty extends AvatarPropertyContract {
 
     public function getUrl()
     {
-        return (!$this->secure) ? 
-            $this->url[0] : 
-            $this->url[1];
+        return (!$this->secure) ? $this->url[0] : $this->url[1];
     }
 
     public function getPath()
@@ -51,11 +60,21 @@ class AvatarProperty extends AvatarPropertyContract {
         return $this->fileName;
     }
 
+    public function getImageExtension()
+    {
+        return $this->avatarImageExtension;
+    }
+
+    public function getAvatarRating()
+    {
+        return $this->avatarRating;
+    }
+
     public function exists()
     {
         $headers = get_headers($this->getUrl());
+
         return (!((boolean)(str_contains($headers[0], '404'))));
     }
-    
 
 }

@@ -2,11 +2,12 @@
 
 use Canducci\Avatar\Contracts\AvatarInfoContract;
 
-class AvatarInfo extends AvatarInfoContract {
+final class AvatarInfo extends AvatarInfoContract {
 
     public function __construct(AvatarEmail $avatarEmail, AvatarProperty $avatarProperty)
     {
         $this->avatarEmail    = $avatarEmail;
+
         $this->avatarProperty = $avatarProperty;
     }
 
@@ -32,11 +33,11 @@ class AvatarInfo extends AvatarInfoContract {
     
     public function getTagImage()
     {
-        if (file_exists(substr($this->getImage(), 1))) {
-            
+        if (file_exists(substr($this->getImage(), 1)))
+        {
             return sprintf('<img src="%s" />', $this->getImage());
-            
         }
+
         return sprintf('<h2>Error: Avatar no find</h2>');
     }
 

@@ -2,7 +2,7 @@
 
 use Canducci\Avatar\Contracts\AvatarSaveContract;
 
-class AvatarSave extends AvatarSaveContract {
+final class AvatarSave extends AvatarSaveContract {
 
     public function __construct(AvatarProperty $avatarProperty)
     {

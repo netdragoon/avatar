@@ -3,17 +3,16 @@
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
 
-class AvatarServiceProvider extends ServiceProvider
-{   
+class AvatarServiceProvider extends ServiceProvider {
+
     public function boot()
     {                
         $this->registerBladeExtensions();                
     }
                 
-    public function register(){
-        
+    public function register()
+    {
         $this->app->singleton('Canducci\Avatar\Contracts\AvatarContract','Canducci\Avatar\Avatar');
-        
     }
     
     protected function registerBladeExtensions()
@@ -46,4 +45,5 @@ class AvatarServiceProvider extends ServiceProvider
         });        
         
     }
+
 }

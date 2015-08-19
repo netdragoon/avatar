@@ -1,6 +1,4 @@
-<?php
-
-namespace Canducci\Avatar\Facades;
+<?php namespace Canducci\Avatar\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

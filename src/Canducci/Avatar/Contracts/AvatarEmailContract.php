@@ -7,9 +7,11 @@ abstract class AvatarEmailContract {
     protected $email;
 
     abstract function getEmail();
+
     abstract function getHash();
 
-    protected function valid($email = null) {
+    protected function valid($email = null)
+    {
 
         if (is_null($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
@@ -19,4 +21,5 @@ abstract class AvatarEmailContract {
 
         $this->email = $email;
     }
+
 }
