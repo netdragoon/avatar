@@ -1,6 +1,6 @@
 # CANDUCCI AVATAR
 
-__Site Referencia: __ http://pt.gravatar.com/
+Site Referencia: http://pt.gravatar.com/
 
 ## INSTALAÇÃO
 
