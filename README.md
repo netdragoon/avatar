@@ -27,3 +27,8 @@ Para registrar o seu `ServiceProvider` no Laravel versão `5.0.*` e `5.1.*` abra
 ]  
 ```
 
+Após essas configurações o pacote Canducci/Avatar estará instalado
+
+##Utilização:
+
+
