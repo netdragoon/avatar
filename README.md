@@ -55,24 +55,24 @@ Métodos que estão presentes em `$avatarInfo`
 
 ```PHP
 
-    //Caminho aonde a imagem está sendo gravada e disponível
-    abstract function getPath();
+  //Caminho aonde a imagem está sendo gravada e disponível
+  abstract function getPath();
 
-    //Código Hash da imagem (md5)      
-    abstract function getHash();
-    
-    //Tamanho da Imagem
-    abstract function getWith();
-    
-    //E-mail informado
-    abstract function getEmail();
-    
-    //Retorno da tag <img> com a imagem que foi trazida do site pt.gravatar.com
-    abstract function getTagImage();
-      //Exemplo: <img src="/image/2f16dd72d50033880dab74299e087b5a-601.jpg" /> 'Dados fictios
-    
-    //Caminho e nome da imagem
-    abstract function getImage();
+  //Código Hash da imagem (md5)      
+  abstract function getHash();
+  
+  //Tamanho da Imagem
+  abstract function getWith();
+  
+  //E-mail informado
+  abstract function getEmail();
+  
+  //Retorno da tag <img> com a imagem que foi trazida do site pt.gravatar.com
+  abstract function getTagImage();
+    //Exemplo: <img src="/image/2f16dd72d50033880dab74299e087b5a-601.jpg" /> 'Dados fictios
+  
+  //Caminho e nome da imagem
+  abstract function getImage();
     
 ```
 
