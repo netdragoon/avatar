@@ -31,4 +31,21 @@ Após essas configurações o pacote Canducci/Avatar estará instalado
 
 ##Utilização:
 
+Para facilitar foi criado uma `function` (função) para manipular de forma simples seguindo esse exemplo:
+
+```PHP
+  Explicação:
+  
+    $email   = 'email referente ao seu cadastro no site pt.gravatar.com';
+    $tamanho = 'tamanho da imagem em pixel (px)');
+    $pasta   = 'pasta responsável por guardar uma cópia da imagem para otimização de tráfego de sua rede'
+  
+  Exemplo:
+  
+  $email   = 'email@email.com';
+  $tamanho = 150;
+  $pasta   = 'imagem/';
+  avatar($email, $tamanho, $pasta);
+```
+
 
