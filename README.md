@@ -1,2 +1,3 @@
-# avatar
-Canducci Avatar
+# CANDUCCI AVATAR
+
+Site Referencia: http://pt.gravatar.com/
