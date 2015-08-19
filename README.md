@@ -19,6 +19,11 @@ Logo após digite na sua linha de código o seguinte comando:
 Para registrar o seu `ServiceProvider` no Laravel versão `5.0.*` e `5.1.*` abra o arquivo da pasta `config`, `app` e insira no `array` de `providers` a seguinte linha:
 
 ```PHP
+'providers' => [
+  ...,
+  ...,
+  
   Canducci\Avatar\Providers\AvatarServiceProvider::class
+]  
 ```
 
