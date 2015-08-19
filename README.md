@@ -51,7 +51,7 @@ Para facilitar foi criado uma `function` (função) para manipular de forma simp
   
 ```
 
-Métodos que estão presentes em `$avatarInfo`
+___Métodos que estão presentes em `$avatarInfo`___
 
 ```PHP
 
