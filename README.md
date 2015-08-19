@@ -76,4 +76,17 @@ Métodos que estão presentes em `$avatarInfo`
     
 ```
 
+##Blade contido de maneira simples para utilização direto na view
+
+```PHP
+  // Primeiro parametro é o e-mail do pt.gravatar.com.
+  // Sedundo parametro é 0 tamanho da imagem.
+  // Terceiro parametro é a pasta que guarda a imagem.
+  
+  @avatar('email@hotmail.com', 601, 'image/')
+  
+  //Geração:
+    //<img src="/image/2f16dd72d50033880dab74299e087b5a-601.jpg" />
+  
+```
 
