@@ -6,6 +6,14 @@ __Site Referencia: __ http://pt.gravatar.com/
 
 No seu arquivo `composer.json`, na chave `require` insira o item abaixo
 
-```PHP
+```JSON
 "canducci/avatar": "dev-master"
 ```
+
+Logo após digite na sua linha de código o seguinte comando:
+
+```PHP
+  $ composer update
+```
+
+
