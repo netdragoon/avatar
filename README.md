@@ -76,7 +76,7 @@ Métodos que estão presentes em `$avatarInfo`
     
 ```
 
-##Blade contido de maneira simples para utilização direto na view
+###Blade contido de maneira simples para utilização direto na view para Framework Laravel `5.0.*` e `5.1.*`
 
 ```PHP
   // Primeiro parametro é o e-mail do pt.gravatar.com.
