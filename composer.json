@@ -3,12 +3,12 @@
     "type": "library",
     "description": "Canducci Avatar",
     "keywords": ["Avatar", "canducci"],
-    "homepage": "https://github.com/diasfulvio/avatar",
+    "homepage": "https://github.com/netdragoon/avatar",
     "license": "MIT",
     "authors": [
         {
-            "name": "Fúlvio Cezar Canducci Dias",
-            "email": "dias.fulvio@gmail.com",
+            "name": "NETDragoon",
+            "email": "netdragoon@outlook.com",
             "role": "Developer"
         }
     ],
