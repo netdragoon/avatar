@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/netdragoon/avatar.svg?branch=master)](https://travis-ci.org/netdragoon/avatar)
 [![Packagist](https://img.shields.io/packagist/dt/canducci/avatar.svg?style=flat)](https://packagist.org/packages/canducci/avatar)
+[![Packagist Version](https://img.shields.io/packagist/v/canducci/avatar.svg?style=flat)](https://packagist.org/packages/canducci/avatar)
 
 Site Referencia: http://pt.gravatar.com/
 
