@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/netdragoon/avatar.svg?branch=master)](https://travis-ci.org/netdragoon/avatar)
 [![Packagist](https://img.shields.io/packagist/dt/canducci/avatar.svg?style=flat)](https://packagist.org/packages/canducci/avatar)
 [![Packagist](https://img.shields.io/packagist/l/canducci/avatar.svg)](https://packagist.org/packages/canducci/avatar)
-[![Packagist](https://img.shields.io/packagist/v/canducci/avatar.svg)](https://packagist.org/packages/canducci/avatar)
+[![Packagist](https://img.shields.io/packagist/v/canducci/avatar.svg?label=version)](https://packagist.org/packages/canducci/avatar)
 
 Site Referencia: http://pt.gravatar.com/
 
