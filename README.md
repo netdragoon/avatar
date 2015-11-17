@@ -1,6 +1,7 @@
 # CANDUCCI AVATAR
 
 [![Build Status](https://travis-ci.org/netdragoon/avatar.svg?branch=master)](https://travis-ci.org/netdragoon/avatar)
+[![Packagist](https://img.shields.io/packagist/dd/doctrine/orm.svg?style=plastic)](https://packagist.org/packages/canducci/avatar)
 
 Site Referencia: http://pt.gravatar.com/
 
