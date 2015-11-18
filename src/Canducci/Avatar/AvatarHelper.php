@@ -11,7 +11,7 @@ if (!function_exists('avatar'))
 
         $a = app('Canducci\Avatar\Contracts\AvatarContract');
         
-        return $a->getAvatarInfo($email, $width, $path, $secure, $avatarRating, $avatarImageExtension);
+        return $a->avatarInfo($email, $width, $path, $secure, $avatarRating, $avatarImageExtension);
 
     }
 
@@ -25,7 +25,7 @@ if (!function_exists('profile'))
 
     	$p = app('Canducci\Avatar\Contracts\AvatarContract');
         
-        return $p->getAvatarProfileData($email);
+        return $p->profileInfo($email);
 
     }
 

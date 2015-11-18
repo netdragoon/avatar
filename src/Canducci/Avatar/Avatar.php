@@ -4,7 +4,7 @@ use Canducci\Avatar\Contracts\AvatarContract;
 
 final class Avatar extends AvatarContract {
 
-    public function getAvatarInfo($email, $width = 80, $path = 'image/', $secure = false, $avatarRating = AvatarRating::G, $avatarImageExtension = AvatarImageExtension::Jpg)
+    public function avatarInfo($email, $width = 80, $path = 'image/', $secure = false, $avatarRating = AvatarRating::G, $avatarImageExtension = AvatarImageExtension::Jpg)
     {
 
         $this->avatarEmail = new AvatarEmail($email);
@@ -19,8 +19,9 @@ final class Avatar extends AvatarContract {
 
     }
 
-    function getAvatarProfileData($email)
+    public function profileInfo($email)
     {
+
         $this->avatarEmail = new AvatarEmail($email);
 
         $ret  = $this->get_contents(sprintf('https://www.gravatar.com/%s.json', $this->avatarEmail->getHash()));
@@ -29,7 +30,7 @@ final class Avatar extends AvatarContract {
 
         $data = $data['entry'][0];
 
-        return new AvatarProfileData
+        return new AvatarProfileInfo
         (
             $this->exist_get_default($data,'id', 0),
             $this->exist_get_default($data,'hash',0),

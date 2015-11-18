@@ -8,9 +8,9 @@ abstract class AvatarContract {
 
     protected $avatarSave;
 
-    abstract function getAvatarInfo($email, $width = 80, $path = 'image/', $secure = false);
+    abstract function avatarInfo($email, $width = 80, $path = 'image/', $secure = false);
 
-    abstract function getAvatarProfileData($email);
+    abstract function profileInfo($email);
 
     protected function exist_get_default($data, $name, $default = null)
     {
@@ -26,6 +26,7 @@ abstract class AvatarContract {
 
     protected function get_contents($url)
     {
+        
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_URL, $url);
