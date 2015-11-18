@@ -12,7 +12,8 @@ Site Referencia: http://pt.gravatar.com/
 No seu arquivo `composer.json`, na chave `require` insira o item abaixo
 
 ```JSON
-"canducci/avatar": "dev-master"
+"canducci/avatar": "0.1.*"
+
 ```
 
 Logo após digite na sua linha de código o seguinte comando:
