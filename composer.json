@@ -2,14 +2,14 @@
     "name": "canducci/avatar",
     "type": "library",
     "description": "Canducci Avatar",
-    "keywords": ["Avatar", "canducci"],
+    "keywords": ["avatar", "canducci", "profile", "gravatar"],
     "homepage": "https://github.com/netdragoon/avatar",
     "license": "MIT",
     "authors": [
         {
-            "name": "NETDragoon",
+            "name": "netdragoon",
             "email": "netdragoon@outlook.com",
-            "role": "Developer"
+            "role": "developer"
         }
     ],
     "require": {

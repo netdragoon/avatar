@@ -135,7 +135,7 @@ O pacote traz o profile do usuário mediante as informações contidas em seu ca
   $profileInfo = Avatar::profileInfo($email);
 
 ```
-___Métodos que estão presentes em `$avatarInfo`___
+___Métodos que estão presentes em `$profileInfo`___
 
 ```PHP
 
