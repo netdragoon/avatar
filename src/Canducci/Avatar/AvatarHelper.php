@@ -20,13 +20,13 @@ if (!function_exists('avatar'))
 if (!function_exists('profile')) 
 {
 
-	function profile($email)
-	{
+    function profile($email)
+    {
 
-		$p = app('Canducci\Avatar\Contracts\AvatarContract');
+    	$p = app('Canducci\Avatar\Contracts\AvatarContract');
         
         return $p->getAvatarProfileData($email);
 
-	}
+    }
 
 }
