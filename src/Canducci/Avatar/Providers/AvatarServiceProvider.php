@@ -12,7 +12,8 @@ class AvatarServiceProvider extends ServiceProvider {
                 
     public function register()
     {
-        $this->app->singleton('Canducci\Avatar\Contracts\AvatarContract','Canducci\Avatar\Avatar');
+        $this->app->singleton('Canducci\Avatar\Contracts\AvatarContract',
+            'Canducci\Avatar\Avatar');
     }
     
     protected function registerBladeExtensions()

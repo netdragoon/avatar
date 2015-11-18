@@ -43,7 +43,9 @@ final class AvatarProperty extends AvatarPropertyContract {
 
     public function getUrl()
     {
-        return (!$this->secure) ? $this->url[0] : $this->url[1];
+        return (!$this->secure) ? 
+            $this->url[0] : 
+            $this->url[1];
     }
 
     public function getPath()

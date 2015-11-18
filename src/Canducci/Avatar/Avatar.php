@@ -4,6 +4,11 @@ use Canducci\Avatar\Contracts\AvatarContract;
 
 final class Avatar extends AvatarContract {
 
+    public function __construct()
+    {
+
+    }
+    
     public function avatarInfo($email, $width = 80, $path = 'image/', $secure = false, $avatarRating = AvatarRating::G, $avatarImageExtension = AvatarImageExtension::Jpg)
     {
 

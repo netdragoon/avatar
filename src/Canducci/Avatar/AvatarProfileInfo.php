@@ -1,6 +1,6 @@
 <?php namespace Canducci\Avatar;
 
-use Canducci\Avatar\Contracts\AvatarProfileDataContract;
+use Canducci\Avatar\Contracts\AvatarProfileInfoContract;
 
 final class AvatarProfileInfo extends AvatarProfileInfoContract {
 
