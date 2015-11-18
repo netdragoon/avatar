@@ -118,4 +118,21 @@ final class AvatarProfileData extends AvatarProfileDataContract {
         return $this->photos;
     }
 
+    public function getArray()
+    {
+        $var = get_object_vars($this);              
+        foreach($var as &$value)
+        {
+           if(is_object($value) && method_exists($value,'getArray'))
+           {
+              $value = $value->getArray();
+           }
+        }
+        return $var;
+    }
+
+    public function getJson()
+    {        
+        return json_encode($this->getArray(), JSON_PRETTY_PRINT);
+    }
 }

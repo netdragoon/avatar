@@ -4,7 +4,7 @@ use Canducci\Avatar\Contracts\AvatarContract;
 
 final class Avatar extends AvatarContract {
 
-    public function getAvatarInfo($email, $width = 80, $path = 'image/', $secure = false, $avatarRating = AvatarRating::G, $avatarImageExtension = AvatarImageExtension::Jpeg)
+    public function getAvatarInfo($email, $width = 80, $path = 'image/', $secure = false, $avatarRating = AvatarRating::G, $avatarImageExtension = AvatarImageExtension::Jpg)
     {
 
         $this->avatarEmail = new AvatarEmail($email);
@@ -29,7 +29,7 @@ final class Avatar extends AvatarContract {
 
         $data = $data['entry'][0];
 
-        return  new AvatarProfileData
+        return new AvatarProfileData
         (
             $this->exist_get_default($data,'id', 0),
             $this->exist_get_default($data,'hash',0),

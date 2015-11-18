@@ -10,12 +10,16 @@ abstract class AvatarInfoContract {
 
     abstract function getHash();
 
-    abstract function getWith();
+    abstract function getWidth();
 
     abstract function getEmail();
 
     abstract function getTagImage();
 
     abstract function getImage();
+
+    abstract function getArray();
+    
+    abstract function getJson();
 
 }

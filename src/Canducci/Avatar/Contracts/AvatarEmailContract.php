@@ -13,7 +13,8 @@ abstract class AvatarEmailContract {
     protected function valid($email = null)
     {
 
-        if (is_null($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if (is_null($email) || !filter_var($email, FILTER_VALIDATE_EMAIL))
+        {
 
             throw new Exception('Email invalid...');
 

@@ -1,5 +1,6 @@
 <?php namespace Canducci\Avatar;
 
+use Canducci\Avatar\Contracts\AvatarEmailContract;
 use Canducci\Avatar\Contracts\AvatarPropertyContract;
 
 final class AvatarProperty extends AvatarPropertyContract {
@@ -7,7 +8,7 @@ final class AvatarProperty extends AvatarPropertyContract {
     const AvatarUrl = 'http://www.gravatar.com/avatar/';
     const AvatarUrlSecure = 'https://secure.gravatar.com/avatar/';
     
-    public function __construct(AvatarEmail $avatarEmail, $width = 80, $path = 'image/', $secure = false, $avatarRating = AvatarRating::G, $avatarImageExtension = AvatarImageExtension::Jpg)
+    public function __construct(AvatarEmailContract $avatarEmail, $width = 80, $path = 'image/', $secure = false, $avatarRating = AvatarRating::G, $avatarImageExtension = AvatarImageExtension::Jpg)
     {
         $this->validWidth($width);
 

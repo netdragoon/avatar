@@ -1,6 +1,6 @@
 <?php namespace Canducci\Avatar;
 
-abstract class AvatarRating {
+final class AvatarRating {
 
     const G = 'g';
 

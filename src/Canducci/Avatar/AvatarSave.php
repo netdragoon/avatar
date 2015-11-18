@@ -1,12 +1,15 @@
 <?php namespace Canducci\Avatar;
 
 use Canducci\Avatar\Contracts\AvatarSaveContract;
+use Canducci\Avatar\Contracts\AvatarPropertyContract;
 
 final class AvatarSave extends AvatarSaveContract {
 
-    public function __construct(AvatarProperty $avatarProperty)
+    public function __construct(AvatarPropertyContract $avatarProperty)
     {
+
         $this->avatarProperty = $avatarProperty;
+        
     }
 
     public function save()

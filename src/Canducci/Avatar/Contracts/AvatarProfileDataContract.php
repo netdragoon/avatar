@@ -66,4 +66,8 @@ abstract class AvatarProfileDataContract {
 
     abstract function getPhotos();
 
+    abstract function getArray();
+    
+    abstract function getJson();
+
 }
