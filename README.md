@@ -1,9 +1,7 @@
 # CANDUCCI AVATAR
 
 [![Build Status](https://travis-ci.org/netdragoon/avatar.svg?branch=master)](https://travis-ci.org/netdragoon/avatar)
-[![Packagist](https://img.shields.io/packagist/dt/canducci/avatar.svg?style=flat)](https://packagist.org/packages/canducci/avatar)
-[![Packagist](https://img.shields.io/packagist/l/canducci/avatar.svg)](https://packagist.org/packages/canducci/avatar)
-[![Packagist](https://img.shields.io/packagist/v/canducci/avatar.svg?label=version)](https://packagist.org/packages/canducci/avatar)
+[![Latest Stable Version](https://poser.pugx.org/canducci/avatar/v/stable)](https://packagist.org/packages/canducci/avatar) [![Total Downloads](https://poser.pugx.org/canducci/avatar/downloads)](https://packagist.org/packages/canducci/avatar) [![Latest Unstable Version](https://poser.pugx.org/canducci/avatar/v/unstable)](https://packagist.org/packages/canducci/avatar) [![License](https://poser.pugx.org/canducci/avatar/license)](https://packagist.org/packages/canducci/avatar)
 
 Site Referencia: http://pt.gravatar.com/
 
